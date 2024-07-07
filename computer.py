@@ -1,6 +1,8 @@
 import random
 import time
 
+rollAgain = False
+
 
 def player(uPoints):
     global rollAgain
@@ -26,7 +28,7 @@ def player(uPoints):
             rollAgain = False
             break
 
-        return rollAgain, uPoints
+    return rollAgain, uPoints
 
 
 def cpu(cPoints):
@@ -49,9 +51,11 @@ def cpu(cPoints):
             print(" I am rolling again\n\n")
             cPoints += diceNum
             rollAgain = True
-        if cpuDecission == 2:
+
+        elif cpuDecission == 2:
             print("i don't want to roll again, It's your turn to roll")
             rollAgain = False
+
         return cPoints, rollAgain
 
 

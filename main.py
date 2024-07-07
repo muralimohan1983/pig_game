@@ -1,5 +1,6 @@
 import computer
 
+rollAgain = False
 userPoints = 0
 cpuPoints = 0
 mode = input("what mode would you like 1 for computer 2 for multiplayer and q for quit").lower()
@@ -15,12 +16,12 @@ elif mode == "1":  # computer
         rollAgain, userPoints = computer.player(userPoints)
 
     elif rollChoice == "n":
-        cpuPoints, rollAgain = computer.cpu(cpuPoints)
+            rollAgain = False
 
-    if rollAgain :
+    if rollAgain:
         computer.player(userPoints)
 
-    elif rollAgain:
+    elif not rollAgain:
         computer.cpu(cpuPoints)
 
 elif mode == "2":  # multiplayer
