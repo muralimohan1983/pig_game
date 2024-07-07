@@ -6,7 +6,7 @@ cpuPoints = 0
 mode = input("what mode would you like 1 for computer 2 for multiplayer and q for quit").lower()
 
 if mode == "q":
-    print("you have exited the game")
+    print("you have closed the game")
     quit()
 elif mode == "1":  # computer
 
